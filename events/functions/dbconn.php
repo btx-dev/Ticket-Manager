@@ -2,9 +2,11 @@
 
 // Connection to the database ticket-manager (MySQL).
 $host = "localhost";
-$user = "DATABASE_USERNAME_HERE";
-$pass = "DATABASE_PASSWORD_HERE";
 $dbname = "ticket-manager";
+
+require_once 'database.php';
+$user = $DB_USER;
+$pass = $DB_PASS;
 
 $dbconn = mysqli_connect($host, $user, $pass, $dbname);
 
